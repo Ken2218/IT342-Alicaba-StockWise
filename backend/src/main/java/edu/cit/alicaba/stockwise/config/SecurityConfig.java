@@ -45,4 +45,9 @@ public class SecurityConfig {
         source.registerCorsConfiguration("/**", config);
         return source;
     }
+    // Inside SecurityConfig.java
+.authorizeHttpRequests(auth -> auth
+            .requestMatchers("/api/v1/auth/**", "/api/v1/items/**").permitAll() // Added items endpoint
+    .anyRequest().authenticated()
+);
 }
