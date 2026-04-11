@@ -13,8 +13,9 @@ public class Item {
     @Column(nullable = false)
     private String name;
 
-    @Column(nullable = false, unique = true)
-    private String sku; // Stock Keeping Unit (Barcode)
+    // Use LONGTEXT because Base64 image strings are very long!
+    @Column(columnDefinition = "LONGTEXT")
+    private String imageBase64;
 
     @Column(nullable = false)
     private Integer quantity;
@@ -22,15 +23,40 @@ public class Item {
     @Column(nullable = false)
     private Double price;
 
-    // Getters and Setters
-    public Long getId() { return id; }
-    public void setId(Long id) { this.id = id; }
-    public String getName() { return name; }
-    public void setName(String name) { this.name = name; }
-    public String getSku() { return sku; }
-    public void setSku(String sku) { this.sku = sku; }
-    public Integer getQuantity() { return quantity; }
-    public void setQuantity(Integer quantity) { this.quantity = quantity; }
-    public Double getPrice() { return price; }
-    public void setPrice(Double price) { this.price = price; }
+    // --- Getters and Setters ---
+
+    public Long getId() {
+        return id;
+    }
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getImageBase64() {
+        return imageBase64;
+    }
+    public void setImageBase64(String imageBase64) {
+        this.imageBase64 = imageBase64;
+    }
+
+    public Integer getQuantity() {
+        return quantity;
+    }
+    public void setQuantity(Integer quantity) {
+        this.quantity = quantity;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+    public void setPrice(Double price) {
+        this.price = price;
+    }
 }

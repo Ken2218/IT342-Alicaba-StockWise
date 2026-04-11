@@ -27,8 +27,9 @@ public class SecurityConfig {
         http
                 .cors(cors -> cors.configurationSource(corsConfigurationSource()))
                 .csrf(csrf -> csrf.disable())
+                // Notice how the updated line is right here inside the chain!
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/api/v1/auth/**").permitAll() // Allow registration and login
+                        .requestMatchers("/api/v1/auth/**", "/api/v1/items/**").permitAll()
                         .anyRequest().authenticated()
                 );
         return http.build();
@@ -45,9 +46,4 @@ public class SecurityConfig {
         source.registerCorsConfiguration("/**", config);
         return source;
     }
-    // Inside SecurityConfig.java
-.authorizeHttpRequests(auth -> auth
-            .requestMatchers("/api/v1/auth/**", "/api/v1/items/**").permitAll() // Added items endpoint
-    .anyRequest().authenticated()
-);
 }

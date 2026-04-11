@@ -16,23 +16,18 @@ public class ItemController {
     @Autowired
     private ItemRepository itemRepository;
 
-    // Get all items
     @GetMapping
     public List<Item> getAllItems() {
         return itemRepository.findAll();
     }
 
-    // Add a new item
     @PostMapping
     public ResponseEntity<?> addItem(@RequestBody Item item) {
-        if (itemRepository.existsBySku(item.getSku())) {
-            return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("SKU already exists.");
-        }
+        // Removed the SKU duplicate check. Just save the item!
         Item savedItem = itemRepository.save(item);
         return ResponseEntity.ok(savedItem);
     }
 
-    // Delete an item
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteItem(@PathVariable Long id) {
         if (!itemRepository.existsById(id)) {
