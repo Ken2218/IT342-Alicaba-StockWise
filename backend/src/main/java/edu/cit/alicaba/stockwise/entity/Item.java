@@ -17,6 +17,10 @@ public class Item {
     @Column(columnDefinition = "LONGTEXT")
     private String imageBase64;
 
+    // NEW: Category field added for the dashboard sidebar filtering
+    @Column(nullable = false)
+    private String category;
+
     @Column(nullable = false)
     private Integer quantity;
 
@@ -44,6 +48,13 @@ public class Item {
     }
     public void setImageBase64(String imageBase64) {
         this.imageBase64 = imageBase64;
+    }
+
+    public String getCategory() {
+        return category;
+    }
+    public void setCategory(String category) {
+        this.category = category;
     }
 
     public Integer getQuantity() {

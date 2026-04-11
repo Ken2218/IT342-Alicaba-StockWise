@@ -36,4 +36,14 @@ public class ItemController {
         itemRepository.deleteById(id);
         return ResponseEntity.ok("Item deleted successfully.");
     }
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateItem(@PathVariable Long id, @RequestBody Item updatedItem) {
+        if (!itemRepository.existsById(id)) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Item not found.");
+        }
+        // Ensure the ID stays the same, then save over the old record
+        updatedItem.setId(id);
+        Item savedItem = itemRepository.save(updatedItem);
+        return ResponseEntity.ok(savedItem);
+    }
 }
