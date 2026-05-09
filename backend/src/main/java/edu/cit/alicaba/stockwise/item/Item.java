@@ -1,4 +1,4 @@
-package edu.cit.alicaba.stockwise.entity;
+package edu.cit.alicaba.stockwise.item;
 
 import jakarta.persistence.*;
 

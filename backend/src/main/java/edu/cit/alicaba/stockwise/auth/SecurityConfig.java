@@ -1,4 +1,4 @@
-package edu.cit.alicaba.stockwise.config;
+package edu.cit.alicaba.stockwise.auth;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

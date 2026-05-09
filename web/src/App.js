@@ -1,9 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
-import Login from './Login';
-import Register from './Register';
-import Dashboard from './Dashboard';
 
+// UPDATED IMPORTS: Pointing to the new Vertical Slice folders
+import Login from './features/auth/Login';
+import Register from './features/auth/Register';
+import Dashboard from './features/inventory/Dashboard';
 
 function App() {
   return (

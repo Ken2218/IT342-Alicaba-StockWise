@@ -1,7 +1,6 @@
-package edu.cit.alicaba.stockwise.controller;
+package edu.cit.alicaba.stockwise.auth;
 
-import edu.cit.alicaba.stockwise.entity.User;
-import edu.cit.alicaba.stockwise.repository.UserRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

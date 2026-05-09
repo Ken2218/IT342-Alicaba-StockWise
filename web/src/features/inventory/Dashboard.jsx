@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
-import ProductFormModal from './ProductFormModal';
-import ProductCard from './ProductCard';
-import InventoryRow from './InventoryRow'; // Ensure you have created this component
-
+import ProductFormModal from './components/ProductFormModal';
+import ProductCard from './components/ProductCard'; 
+import InventoryRow from './components/InventoryRow';
 const SIDEBAR_CATEGORIES = ['All Products', 'Beverages', 'Snacks', 'Canned Goods', 'Toiletries', 'Others'];
 
 const Dashboard = () => {
