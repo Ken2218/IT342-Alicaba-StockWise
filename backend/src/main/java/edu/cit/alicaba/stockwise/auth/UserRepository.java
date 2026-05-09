@@ -1,6 +1,6 @@
-package edu.cit.alicaba.stockwise.repository;
+package edu.cit.alicaba.stockwise.auth;
 
-import edu.cit.alicaba.stockwise.entity.User;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

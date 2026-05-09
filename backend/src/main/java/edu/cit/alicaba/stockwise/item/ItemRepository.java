@@ -1,6 +1,5 @@
-package edu.cit.alicaba.stockwise.repository;
+package edu.cit.alicaba.stockwise.item;
 
-import edu.cit.alicaba.stockwise.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

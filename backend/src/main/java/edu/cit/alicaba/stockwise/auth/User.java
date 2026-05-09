@@ -1,4 +1,4 @@
-package edu.cit.alicaba.stockwise.entity;
+package edu.cit.alicaba.stockwise.auth;
 
 import jakarta.persistence.*;
 import java.time.LocalDateTime;
