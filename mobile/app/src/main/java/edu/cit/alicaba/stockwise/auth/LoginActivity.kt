@@ -1,13 +1,17 @@
-package edu.cit.alicaba.stockwise
+package edu.cit.alicaba.stockwise.auth
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
-import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import edu.cit.alicaba.stockwise.core.ApiClient
+import edu.cit.alicaba.stockwise.inventory.DashboardActivity
+import edu.cit.alicaba.stockwise.core.LoginRequest
+import edu.cit.alicaba.stockwise.core.LoginResponse
+import edu.cit.alicaba.stockwise.R
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

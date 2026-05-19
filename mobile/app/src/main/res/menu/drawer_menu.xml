@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="MENU">
+        <menu>
+            <item android:id="@+id/nav_product_grid" android:title="Product Grid" />
+            <item android:id="@+id/nav_quick_inventory" android:title="Quick Inventory" />
+        </menu>
+    </item>
+    <item android:title="CATEGORIES">
+        <menu>
+            <item android:id="@+id/nav_all_products" android:title="All Products" />
+            <item android:id="@+id/nav_beverages" android:title="Beverages" />
+            <item android:id="@+id/nav_snacks" android:title="Snacks" />
+            <item android:id="@+id/nav_canned_goods" android:title="Canned Goods" />
+            <item android:id="@+id/nav_toiletries" android:title="Toiletries" />
+            <item android:id="@+id/nav_others" android:title="Others" />
+        </menu>
+    </item>
+</menu>

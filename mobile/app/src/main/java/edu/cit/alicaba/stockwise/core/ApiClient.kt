@@ -1,4 +1,4 @@
-package edu.cit.alicaba.stockwise
+package edu.cit.alicaba.stockwise.core
 
 import retrofit2.Call
 import retrofit2.Retrofit
@@ -26,11 +26,16 @@ interface AuthApiService {
 object ApiClient {
     private const val BASE_URL = "http://10.0.2.2:8080/"
 
-    val authService: AuthApiService by lazy {
+    val retrofit: Retrofit by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(AuthApiService::class.java)
+    }
+
+    // ADD THIS NEW BLOCK:
+    // This creates the authService that LoginActivity is looking for
+    val authService: AuthApiService by lazy {
+        retrofit.create(AuthApiService::class.java)
     }
 }

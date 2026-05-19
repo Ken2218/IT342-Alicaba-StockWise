@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">StockWise Mobile</string>
+    <string name="open">Open Menu</string>
+    <string name="close">Close Menu</string>
 </resources>
