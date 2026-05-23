@@ -28,26 +28,29 @@
         android:id="@+id/etRegName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Full Name"
+        android:textColor="#212121"
+        android:layout_marginBottom="16dp"
         android:background="#FFFFFF"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
+        android:hint="Full Name"
+        android:padding="12dp" />
 
     <EditText
         android:id="@+id/etRegEmail"
         android:layout_width="match_parent"
         android:layout_height="50dp"
+        android:layout_marginBottom="16dp"
+        android:background="#FFFFFF"
+        android:textColor="#212121"
         android:hint="Email Address"
         android:inputType="textEmailAddress"
-        android:background="#FFFFFF"
-        android:padding="12dp"
-        android:layout_marginBottom="16dp"/>
+        android:padding="12dp" />
 
     <EditText
         android:id="@+id/etRegPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Password"
+        android:textColor="#212121"
         android:inputType="textPassword"
         android:background="#FFFFFF"
         android:padding="12dp"
