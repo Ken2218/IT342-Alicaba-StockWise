@@ -28,14 +28,49 @@
             android:layout_margin="16dp"
             android:background="#FFFFFF"
             android:elevation="2dp"
-            app:queryHint="Search products by name..."
+            app:queryHint="Search products..."
             app:iconifiedByDefault="false" />
+
+        <TextView
+            android:id="@+id/tvSectionTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/searchView"
+            android:layout_marginHorizontal="16dp"
+            android:text="ALL PRODUCTS"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#1F2937"
+            android:textAllCaps="true"/>
+
+        <LinearLayout
+            android:id="@+id/layoutEmptyState"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvSectionTitle"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+            <ImageView
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@android:drawable/ic_menu_search"
+                app:tint="#9CA3AF"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="No products found."
+                android:textSize="18sp"
+                android:textColor="#6B7280"/>
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewInventory"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/searchView"
+            android:layout_below="@id/tvSectionTitle"
+            android:layout_marginTop="8dp"
             android:clipToPadding="false"
             android:padding="8dp"/>
 
@@ -59,8 +94,10 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:background="#FFFFFF"
+        app:headerLayout="@layout/nav_header"
         app:menu="@menu/drawer_menu"
         app:itemTextColor="#333333"
         app:itemIconTint="#065F46" />
+
 
 </androidx.drawerlayout.widget.DrawerLayout>
